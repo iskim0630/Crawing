@@ -32,6 +32,11 @@ if __name__ == '__main__':
     # t2 = "아버지"
     # t3 = "엄마"
 
+    t1 = "아빠가 밥을 먹습니다."
+    t2 = "아버지가 식사를 합니다."
+    t3 = "엄마가 일을 합니다."
+    
+
     # 문장 임베딩
     te1 = model(tokenizer.encode(t1, return_tensors='pt'))[0].squeeze(0).mean(dim=0).detach().numpy()
     te2 = model(tokenizer.encode(t2, return_tensors='pt'))[0].squeeze(0).mean(dim=0).detach().numpy()
